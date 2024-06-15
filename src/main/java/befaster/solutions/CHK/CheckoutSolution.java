@@ -210,7 +210,7 @@ public class CheckoutSolution {
 
         promo_v=0;
         if(nr22>=3){
-            promo_v=nr22/10;
+            promo_v=nr22/3;
             nr22=nr22-promo_v*3;
         }
 
@@ -218,3 +218,4 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
