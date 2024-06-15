@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,reducere,promo ;
+        int nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,nr6,reducere,promo ;
         nrverif=0;
         for(i=0;i<skus.length();i++) {
             if(skus.charAt(i)=='A'){
@@ -17,6 +17,8 @@ public class CheckoutSolution {
                 nrverif++;
             }if(skus.charAt(i)=='E'){
                 nrverif++;
+            }if(skus.charAt(i)=='F'){
+                nrverif++;
             }
         }
         if(nrverif<skus.length()){
@@ -28,6 +30,7 @@ public class CheckoutSolution {
         nr3=0;
         nr4=0;
         nr5=0;
+        nr6=0;
         for(i=0;i<skus.length();i++) {
             if(skus.charAt(i)=='A'){
                 nr1++;
@@ -39,6 +42,8 @@ public class CheckoutSolution {
                 nr4++;
             }else if(skus.charAt(i)=='E'){
                 nr5++;
+            }else if(skus.charAt(i)=='F'){
+                nr6++;
             }
         }
         reducere=nr5/2;
@@ -53,10 +58,11 @@ public class CheckoutSolution {
             nr1 = nr1 - promo * 5;
         }
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+((nr6/2)+(nr6%2))*10;
         return suma;
     }
 }
+
 
 
 
