@@ -222,24 +222,24 @@ public class CheckoutSolution {
         if(suma_promo>=3){
             counter=(suma_promo/3)*3;
             while(counter>0){
-                while(nr24>0&&counter>0){
-                    nr24--;
-                    counter--;
-                }
-                while(nr19>0&&counter>0){
-                    nr19--;
-                    counter--;
-                }
-                while(nr20>0&&counter>0){
-                    nr20--;
+                while(nr26>0&&counter>0){
+                    nr26--;
                     counter--;
                 }
                 while(nr25>0&&counter>0){
                     nr25--;
                     counter--;
                 }
-                while(nr26>0&&counter>0){
-                    nr26--;
+                while(nr20>0&&counter>0){
+                    nr20--;
+                    counter--;
+                }
+                while(nr19>0&&counter>0){
+                    nr19--;
+                    counter--;
+                }
+                while(nr24>0&&counter>0){
+                    nr24--;
                     counter--;
                 }
             }
@@ -249,6 +249,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
