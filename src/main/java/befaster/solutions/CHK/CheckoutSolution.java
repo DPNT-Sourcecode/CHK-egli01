@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,nr6,nr7,nr8,nr9,nr10,nr11,nr12,nr13,nr14,nr15,nr16,nr17,nr18,nr19,nr20,nr21,nr22,nr23,nr24,reducere,promo ;
+        int nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,nr6,nr7,nr8,nr9,nr10,nr11,nr12,nr13,nr14,nr15,nr16,nr17,nr18,nr19,nr20,nr21,nr22,nr23,nr24,nr25,nr26,promo_h,promo_v,reducere,promo ;
         nrverif=0;
         for(i=0;i<skus.length();i++) {
             if(skus.charAt(i)=='A'){
@@ -108,6 +108,8 @@ public class CheckoutSolution {
         nr22=0;
         nr23=0;
         nr24=0;
+        nr25=0;
+        nr26=0;
         for(i=0;i<skus.length();i++) {
             if(skus.charAt(i)=='A'){
                 nr1++;
@@ -122,61 +124,64 @@ public class CheckoutSolution {
             }else if(skus.charAt(i)=='F'){
                 nr6++;
             }else if(skus.charAt(i)=='G'){
-                nr6++;
-            }
-            else if(skus.charAt(i)=='H'){
                 nr7++;
             }
-            else if(skus.charAt(i)=='I'){
+            else if(skus.charAt(i)=='H'){
                 nr8++;
             }
-            else if(skus.charAt(i)=='J'){
+            else if(skus.charAt(i)=='I'){
                 nr9++;
             }
-            else if(skus.charAt(i)=='K'){
+            else if(skus.charAt(i)=='J'){
                 nr10++;
             }
-            else if(skus.charAt(i)=='L'){
+            else if(skus.charAt(i)=='K'){
                 nr11++;
             }
-            else if(skus.charAt(i)=='M'){
+            else if(skus.charAt(i)=='L'){
                 nr12++;
             }
-            else if(skus.charAt(i)=='N'){
+            else if(skus.charAt(i)=='M'){
                 nr13++;
             }
-            else if(skus.charAt(i)=='O'){
+            else if(skus.charAt(i)=='N'){
                 nr14++;
             }
-            else if(skus.charAt(i)=='P'){
+            else if(skus.charAt(i)=='O'){
                 nr15++;
             }
-            else if(skus.charAt(i)=='R'){
+            else if(skus.charAt(i)=='P'){
                 nr16++;
             }
-            else if(skus.charAt(i)=='S'){
+            else if(skus.charAt(i)=='Q'){
                 nr17++;
             }
-            else if(skus.charAt(i)=='T'){
+            else if(skus.charAt(i)=='R'){
                 nr18++;
             }
-            else if(skus.charAt(i)=='U'){
+            else if(skus.charAt(i)=='S'){
                 nr19++;
             }
-            else if(skus.charAt(i)=='V'){
+            else if(skus.charAt(i)=='T'){
                 nr20++;
             }
-            else if(skus.charAt(i)=='W'){
+            else if(skus.charAt(i)=='U'){
                 nr21++;
             }
-            else if(skus.charAt(i)=='X'){
+            else if(skus.charAt(i)=='V'){
                 nr22++;
             }
-            else if(skus.charAt(i)=='Y'){
+            else if(skus.charAt(i)=='W'){
                 nr23++;
             }
-            else if(skus.charAt(i)=='Z'){
+            else if(skus.charAt(i)=='X'){
                 nr24++;
+            }
+            else if(skus.charAt(i)=='Y'){
+                nr25++;
+            }
+            else if(skus.charAt(i)=='Z'){
+                nr26++;
             }
         }
         reducere=nr5/2;
@@ -201,10 +206,17 @@ public class CheckoutSolution {
         nr17=nr17-nr18/3;
         nr21=nr21-nr21/4;
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*30+nr20*20+nr21*40+;
+        promo_v=0;
+        if(nr22>=3){
+            promo_v=nr22/10;
+            nr22=nr22-promo_v*3;
+        }
+
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*30+nr20*20+nr21*40+promo_v*130+(nr22/2)*90+(nr22-2*(nr22/2))*50+nr23*20+nr24*90+nr25*10+nr26*50;
         return suma;
     }
 }
+
 
 
 
