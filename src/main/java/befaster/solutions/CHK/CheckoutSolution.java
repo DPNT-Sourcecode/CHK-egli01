@@ -202,8 +202,10 @@ public class CheckoutSolution {
             promo_h=nr8/10;
             nr8=nr8-promo_h*10;
         }
-        nr14=nr14-nr14/4;
+        nr13=nr13-nr14/4;
+        if(nr13<0)nr13=0;
         nr17=nr17-nr18/3;
+        if(nr17<0)nr17=0;
         nr21=nr21-nr21/4;
 
         promo_v=0;
@@ -216,9 +218,3 @@ public class CheckoutSolution {
         return suma;
     }
 }
-
-
-
-
-
-
