@@ -222,11 +222,31 @@ public class CheckoutSolution {
         if(suma_promo>3){
             counter=(suma_promo/3)*3;
             while(counter>0){
-                
+                while(nr24>0&&counter>0){
+                    nr24--;
+                    counter--;
+                }
+                while(nr19>0&&counter>0){
+                    nr19--;
+                    counter--;
+                }
+                while(nr20>0&&counter>0){
+                    nr20--;
+                    counter--;
+                }
+                while(nr25>0&&counter>0){
+                    nr25--;
+                    counter--;
+                }
+                while(nr26>0&&counter>0){
+                    nr26--;
+                    counter--;
+                }
             }
         }
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*30+nr20*20+nr21*40+promo_v*130+(nr22/2)*90+(nr22-2*(nr22/2))*50+nr23*20+nr24*90+nr25*10+nr26*50;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*20+nr20*20+nr21*40+promo_v*130+(nr22/2)*90+(nr22-2*(nr22/2))*50+nr23*20+nr24*17+nr25*20+nr26*21;
         return suma;
     }
 }
+
