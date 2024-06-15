@@ -4,7 +4,22 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int nr1,nr2,nr3,nr4,i,suma ;
+        int nr1,nr2,nr3,nr4,i,suma,nrverif ;
+        nrverif=0;
+        for(i=0;i<skus.length();i++) {
+            if(skus.charAt(i)=='A'){
+                nrverif++;
+            } if(skus.charAt(i)=='B'){
+                nrverif++;
+            } if(skus.charAt(i)=='C'){
+                nrverif++;
+            }if(skus.charAt(i)=='D'){
+                nrverif++;
+            }
+        }
+        if(nrverif<skus.length()){
+            return -1;
+        }
         suma=0;
         nr1=0;
         nr2=0;
@@ -25,6 +40,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
