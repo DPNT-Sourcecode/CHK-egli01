@@ -197,11 +197,13 @@ public class CheckoutSolution {
             promo_h=nr8/10;
             nr8=nr8-promo_h*10;
         }
+        nr14=nr14-nr14/4;
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+;
         return suma;
     }
 }
+
 
 
 
