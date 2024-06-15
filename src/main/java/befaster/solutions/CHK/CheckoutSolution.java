@@ -192,8 +192,15 @@ public class CheckoutSolution {
         }
         nr6=nr6-nr6/3;
 
+        promo_h=0;
+        if(nr8>=10){
+            promo_h=nr8/10;
+            nr8=nr8-promo_h*10;
+        }
+
         suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20;
         return suma;
     }
 }
+
 
