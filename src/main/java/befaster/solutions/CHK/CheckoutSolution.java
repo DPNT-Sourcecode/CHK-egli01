@@ -198,9 +198,10 @@ public class CheckoutSolution {
             nr8=nr8-promo_h*10;
         }
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+;
         return suma;
     }
 }
+
 
 
