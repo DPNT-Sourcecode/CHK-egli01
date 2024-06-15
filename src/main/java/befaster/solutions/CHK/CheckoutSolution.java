@@ -219,7 +219,7 @@ public class CheckoutSolution {
             nr22=nr22-promo_v*3;
         }
         suma_promo=nr19+nr20+nr24+nr25+nr26;
-        if(suma_promo>3){
+        if(suma_promo>=3){
             counter=(suma_promo/3)*3;
             while(counter>0){
                 while(nr24>0&&counter>0){
@@ -249,5 +249,6 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
