@@ -57,8 +57,10 @@ public class CheckoutSolution {
             promo = nr1 / 5;
             nr1 = nr1 - promo * 5;
         }
+        nr6=nr6-nr6/2;
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+((nr6/2)+(nr6%2))*10;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10;
         return suma;
     }
 }
+
