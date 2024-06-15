@@ -47,8 +47,15 @@ public class CheckoutSolution {
         }else{
             nr2=0;
         }
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5;
+        promo=0;
+        if(nr1>=5) {
+            promo = nr1 / 5;
+            nr1 = nr1 - promo * 5;
+        }
+        
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200;
         return suma;
     }
 }
+
 
