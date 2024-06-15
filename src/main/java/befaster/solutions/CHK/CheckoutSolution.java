@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,nr6,nr7,nr8,nr9,nr10,nr11,nr12,nr13,nr14,nr15,nr16,nr17,nr18,nr19,nr20,nr21,nr22,nr23,nr24,nr25,nr26,promo_h,promo_v,reducere,promo ;
+        int reducere_m,nr1,nr2,nr3,nr4,i,suma,nrverif,nr5,nr6,nr7,nr8,nr9,nr10,nr11,nr12,nr13,nr14,nr15,nr16,nr17,nr18,nr19,nr20,nr21,nr22,nr23,nr24,nr25,nr26,promo_h,promo_v,reducere,promo ;
         nrverif=0;
         for(i=0;i<skus.length();i++) {
             if(skus.charAt(i)=='A'){
@@ -202,7 +202,11 @@ public class CheckoutSolution {
             promo_h=nr8/10;
             nr8=nr8-promo_h*10;
         }
-        nr13=nr13-nr14/4;
+        reducere_m=0;
+        reducere_m=nr14/3;
+        if(reducere_m<0){
+            reducere_m=0;
+        }
         if(nr13<0)nr13=0;
         nr17=nr17-nr18/3;
         if(nr17<0)nr17=0;
@@ -214,8 +218,9 @@ public class CheckoutSolution {
             nr22=nr22-promo_v*3;
         }
 
-        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+nr13*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*30+nr20*20+nr21*40+promo_v*130+(nr22/2)*90+(nr22-2*(nr22/2))*50+nr23*20+nr24*90+nr25*10+nr26*50;
+        suma=(nr1/3)*130+(nr1-3*(nr1/3))*50+(nr2/2)*45+(nr2-2*(nr2/2))*30+nr3*20+nr4*15+nr5*40+promo*200+nr6*10+nr7*20+promo_h*80+(nr8/5)*45+(nr8-5*(nr8/5))*10+nr9*35+nr10*60+(nr11/2)*150+(nr11-2*(nr11/2))*80+nr12*90+(nr13-reducere_m)*15+nr14*40+nr15*10+(nr16/5)*200+(nr16-5*(nr16/5))*50+(nr17/3)*80+(nr17-3*(nr17/3))*30+nr18*50+nr19*30+nr20*20+nr21*40+promo_v*130+(nr22/2)*90+(nr22-2*(nr22/2))*50+nr23*20+nr24*90+nr25*10+nr26*50;
         return suma;
     }
 }
+
 
